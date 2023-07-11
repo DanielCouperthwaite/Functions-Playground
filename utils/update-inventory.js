@@ -1,4 +1,5 @@
 
+
 function updateInventory(arr1, arr2) {
 
     const array1 = [...arr1]
