@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import './App.css'
 import CheckIdentical from './CheckIdentical.jsx'
+import CountNestedItems from './CountNestedItems'
+import PreventMutation from './PreventMutation'
+import UpdateItems from './UpdateInventory'
 
-// import checkIdentical from '../utils/check-if-identical'
-// import CountItems from '../utils/count-nested-items'
-// import preventMutation from '../utils/prevent-mutation'
-// import UpdateItems from '../utils/update-inventory'
+
 
 function App() {
   const [show, setShow] = useState(false)
@@ -14,12 +14,11 @@ function App() {
     return (
       <>
       
-    <p>Functions go here!</p>
-    <CheckIdentical />
-
     
-
-    <input type="text" ></input>
+    <CheckIdentical />
+    <CountNestedItems />
+    <PreventMutation />
+    <UpdateItems />
 
 
       </>
