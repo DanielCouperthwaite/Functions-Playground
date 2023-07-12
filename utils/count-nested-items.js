@@ -1,6 +1,6 @@
 
 
-function countData (obj) {
+export default function countNestedItems (obj) {
 
     const newObj = {};
 
@@ -33,5 +33,3 @@ function countData (obj) {
     return newObj
 
 }
-
-module.exports = countData;
