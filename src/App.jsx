@@ -1,16 +1,27 @@
 import { useState } from 'react'
 import './App.css'
+import CheckIdentical from './CheckIdentical.jsx'
+
+// import checkIdentical from '../utils/check-if-identical'
+// import CountItems from '../utils/count-nested-items'
+// import preventMutation from '../utils/prevent-mutation'
+// import UpdateItems from '../utils/update-inventory'
 
 function App() {
   const [show, setShow] = useState(false)
 
-  function UpdateItems() {
+  function Functions() {
     return (
       <>
       
-    <p>Hello</p>
+    <p>Functions go here!</p>
+    <CheckIdentical />
+
+    
 
     <input type="text" ></input>
+
+
       </>
     )
 
@@ -29,7 +40,7 @@ function App() {
       <div className="card">
         {show === true ? <button onClick={() => setShow(false)}>Hide Functions</button> : <button onClick={() => setShow(true)}>Click Here</button>}
       </div>
-      <p>{show === true ? <UpdateItems /> : null}</p>
+      <p>{show === true ? <Functions /> : null}</p>
       
     </>
   )
