@@ -3,7 +3,8 @@
 export default function UpdateItems (){
     return (
         <>
-            <p>Update Inventory goes here</p>
+            <h2>Update Inventory</h2>
+            <p>A function to update an object with the values of another</p>
         </>
     )
 }

@@ -12,7 +12,7 @@ export default function countNestedItems (obj) {
             } else typeof newObj['array'] === 'undefined' ? newObj['array'] = 1 : newObj['array'] = (newObj['array'] + 1)
        
 
-            const nestObj = (countData(obj[key]))
+            const nestObj = (countNestedItems(obj[key]))
            
 
             for (let key in nestObj) {
@@ -24,7 +24,9 @@ export default function countNestedItems (obj) {
                 
             }
 
-        } else if (newItem = typeof obj[key]){
+        } 
+        else {
+            const newItem = typeof obj[key]
             typeof newObj[newItem] === 'undefined' ? newObj[newItem] = 1 : newObj[newItem] = (newObj[newItem] + 1)
         }
 
