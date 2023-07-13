@@ -7,7 +7,6 @@ export default function CheckIdentical (){
     const [result, setResult] = useState('')
     const [showInput, setShowInput] = useState([])
     const [pressed, setPressed] = useState(false)
-    console.log(result)
 
     function handleSubmit (event){
         event.preventDefault();
@@ -19,10 +18,12 @@ export default function CheckIdentical (){
             const jsonString1 = eval('(' + input1 + ')')
             const jsonString2 = eval('(' + input2 + ')')
             setShowInput(input1, input2)
-            setResult(checkIfIdentical(jsonString1, jsonString2))
+            if(checkIfIdentical(jsonString1, jsonString2) === true){
+                setResult('true')
+            } else setResult('false')
         }
     }
-
+    
     return (
         <>
             <section style={{border: '10px solid'}}>
@@ -51,7 +52,6 @@ export default function CheckIdentical (){
             </form>
             <p>{showInput}</p>
             <p>{result}</p>
-            <p>Here: {result}</p>
             </section>
         </>
     )
