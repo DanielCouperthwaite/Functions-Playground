@@ -11,6 +11,10 @@ export default function CountNestedItems (){
     function handleSubmit (event){
         event.preventDefault();
         console.log(input, JSON.parse(input))
+
+        JSON.stringify(input)
+        JSON.parse(input)
+
         setResult(CountItems(JSON.parse(input)))
     }
 
@@ -31,11 +35,11 @@ export default function CountNestedItems (){
                 <button>Activate Function!</button>
             </form>
             <p>{input}</p>
-            <p>{result["string"]}</p>
-            <p>{result["object"]}</p>
-            <p>{result["array"]}</p>
-            <p>{result["number"]}</p>
-            <p>{result["boolean"]}</p>
+            <p>{result["string"] > 0 ? <p>Strings: {result["string"]}</p> : null}</p>
+            <p>{result["object"] > 0 ? <p>Objects: {result["object"]}</p> : null}</p>
+            <p>{result["array"] > 0 ? <p>Arrays: {result["array"]}</p> : null}</p>
+            <p>{result["number"] > 0 ? <p>Numbers: {result["number"]}</p> : null}</p>
+            <p>{result["boolean"] > 0 ? <p>Booleans: {result["boolean"]}</p> : null}</p>
             </section>
         </>
     )
