@@ -6,24 +6,22 @@ export default function CountNestedItems (){
     const [input, setInput] = useState([])
     const [result, setResult] = useState('')
     const [showInput, setShowInput] = useState([])
-    // console.log(input)
-    // console.log(result)
+    const [pressed, setPressed] = useState(false)
 
     function handleSubmit (event){
         event.preventDefault();
-        
 
+        setResult('')
+        setShowInput('Please enter a valid object!')
+        if(input.length === 0){
+            setShowInput('Please enter a valid object!')
+        } else {
+      
         const jsonString = eval('(' + input + ')')
-        
-
-        console.log(input)
-
-        // console.log(input.charAt(0))
             
             setShowInput(input)
-            console.log(CountItems(jsonString))
             setResult(CountItems(jsonString))
-        
+    }
     }
 
     return (
@@ -37,12 +35,14 @@ export default function CountNestedItems (){
                     placeholder="eg. {1, 2, 3, [4]}"
                     value={input}
                     onChange={(event) => {
+                        setPressed(false)
                         setInput(event.target.value)
                     }}
                 />
                 <button>Activate Function!</button>
             </form>
             <p>{showInput}</p>
+            <p>{Object.keys(result).length === 0 && pressed === true ? 'error4' : null}</p>
             <p>{result["string"] > 0 ? <p>Strings: {result["string"]}</p> : null}</p>
             <p>{result["object"] > 0 ? <p>Objects: {result["object"]}</p> : null}</p>
             <p>{result["array"] > 0 ? <p>Arrays: {result["array"]}</p> : null}</p>
