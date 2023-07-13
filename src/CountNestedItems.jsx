@@ -10,18 +10,15 @@ export default function CountNestedItems (){
 
     function handleSubmit (event){
         event.preventDefault();
-
         setResult('')
         setShowInput('Please enter a valid object!')
         if(input.length === 0){
             setShowInput('Please enter a valid object!')
         } else {
-      
-        const jsonString = eval('(' + input + ')')
-            
+            const jsonString = eval('(' + input + ')')
             setShowInput(input)
             setResult(CountItems(jsonString))
-    }
+        }
     }
 
     return (
