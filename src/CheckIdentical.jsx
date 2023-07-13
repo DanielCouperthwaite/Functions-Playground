@@ -17,7 +17,7 @@ export default function CheckIdentical (){
         } else {
             const jsonString1 = eval('(' + input1 + ')')
             const jsonString2 = eval('(' + input2 + ')')
-            setShowInput(input1, input2)
+            setShowInput(input1 + ' = ' + input2 + ' ?')
             if(checkIfIdentical(jsonString1, jsonString2) === true){
                 setResult('true')
             } else setResult('false')
