@@ -1,6 +1,6 @@
 
 
-const __ = require('lodash')
+import __ from 'lodash'
 
 export default function areIdentical(obj1, obj2) {
 
