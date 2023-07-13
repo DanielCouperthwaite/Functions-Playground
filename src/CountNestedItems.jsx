@@ -4,18 +4,26 @@ import { useState } from "react"
 export default function CountNestedItems (){
 
     const [input, setInput] = useState([])
-    const [result, setResult] = useState([])
-    console.log(input)
-    console.log(result)
+    const [result, setResult] = useState('')
+    const [showInput, setShowInput] = useState([])
+    // console.log(input)
+    // console.log(result)
 
     function handleSubmit (event){
         event.preventDefault();
-        console.log(input, JSON.parse(input))
+        
 
-        JSON.stringify(input)
-        JSON.parse(input)
+        const jsonString = eval('(' + input + ')')
+        
 
-        setResult(CountItems(JSON.parse(input)))
+        console.log(input)
+
+        // console.log(input.charAt(0))
+            
+            setShowInput(input)
+            console.log(CountItems(jsonString))
+            setResult(CountItems(jsonString))
+        
     }
 
     return (
@@ -34,7 +42,7 @@ export default function CountNestedItems (){
                 />
                 <button>Activate Function!</button>
             </form>
-            <p>{input}</p>
+            <p>{showInput}</p>
             <p>{result["string"] > 0 ? <p>Strings: {result["string"]}</p> : null}</p>
             <p>{result["object"] > 0 ? <p>Objects: {result["object"]}</p> : null}</p>
             <p>{result["array"] > 0 ? <p>Arrays: {result["array"]}</p> : null}</p>

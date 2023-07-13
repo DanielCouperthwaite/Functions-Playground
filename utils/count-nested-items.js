@@ -2,6 +2,10 @@
 
 export default function countNestedItems (obj) {
 
+    if(typeof obj !== 'object'){
+        return 'Please enter a valid object!'
+    }
+
     const newObj = {};
 
     for(let key in obj){
