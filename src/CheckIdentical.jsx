@@ -10,7 +10,7 @@ export default function CheckIdentical (){
     function handleSubmit (event){
         event.preventDefault();
         setResult('')
-        setShowInput('Please enter a valid object!')
+        setShowInput('Please enter two valid objects!')
         if(input1.length === 0 || input2.length === 0){
             setShowInput('Please enter two valid objects!')
         } else {
