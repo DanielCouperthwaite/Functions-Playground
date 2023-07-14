@@ -16,7 +16,7 @@ function App() {
       
     
     <CheckIdentical />
-    <CountNestedItems />
+    <CountNestedItems/>
     <PreventMutation />
     <UpdateItems />
 

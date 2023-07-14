@@ -23,12 +23,13 @@ export default function CountNestedItems (){
 
     return (
         <>
-            <section style={{border: '10px solid', padding: '20px', margin: '20px'}}>
+            <div style={{padding: '20px'}}>
+            <section style={{border: '10px solid', padding: '20px', margin: '20px', borderRadius: '25px'}}>
             <h2>Count Data Types</h2>
             <p>A function to to count the types of data within an object, however deeply nested!</p>
             <form onSubmit={handleSubmit}>
                 <input
-                    type="text area"
+                    type="multiline text area"
                     placeholder="eg. {1: 1, 2: 'two', 3:[4]}"
                     value={input}
                     onChange={(event) => {
@@ -46,6 +47,7 @@ export default function CountNestedItems (){
             <p>{result["number"] > 0 ? <p>Numbers: {result["number"]}</p> : null}</p>
             <p>{result["boolean"] > 0 ? <p>Booleans: {result["boolean"]}</p> : null}</p>
             </section>
+            </div>
         </>
     )
 }

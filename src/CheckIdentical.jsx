@@ -25,11 +25,13 @@ export default function CheckIdentical (){
     
     return (
         <>
-            <section style={{border: '10px solid', padding: '20px', margin: '20px'}}>
+            <div style={{padding: '20px'}}>
+            <section style={{border: '10px solid', padding: '20px', margin: '20px', borderRadius: '25px'}}>
             <h2>Check if Objects are Identical</h2>
             <p>A function to check whether the items in an object are identical, however deeply nested they might be!</p>
             <form onSubmit={handleSubmit}>
                 <input
+                    style={{margin: '5px'}}
                     type="text area"
                     placeholder="Enter first object here!"
                     value={input1}
@@ -38,6 +40,7 @@ export default function CheckIdentical (){
                     }}
                 />
                 <input
+                    style={{margin: '5px'}}
                     type="text area"
                     placeholder="Eneter second object here!"
                     value={input2}
@@ -45,11 +48,12 @@ export default function CheckIdentical (){
                         setInput2(event.target.value)
                     }}
                 />
-                <button>Activate Function!</button>
+                <button style={{margin: '15px'}}>Activate Function!</button>
             </form>
             <p>{showInput}</p>
             <p>{result}</p>
             </section>
+            </div>
         </>
     )
 }
