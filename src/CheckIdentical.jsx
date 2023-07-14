@@ -6,7 +6,6 @@ export default function CheckIdentical (){
     const [input2, setInput2] = useState([])
     const [result, setResult] = useState('')
     const [showInput, setShowInput] = useState([])
-    const [pressed, setPressed] = useState(false)
 
     function handleSubmit (event){
         event.preventDefault();
@@ -19,8 +18,8 @@ export default function CheckIdentical (){
             const jsonString2 = eval('(' + input2 + ')')
             setShowInput(input1 + ' = ' + input2 + ' ?')
             if(checkIfIdentical(jsonString1, jsonString2) === true){
-                setResult('true')
-            } else setResult('false')
+                setResult('✔️ These objects match!')
+            } else setResult('❌ These objects do not match')
         }
     }
     
