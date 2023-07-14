@@ -6,6 +6,7 @@ export default function UpdateItems(){
     const [input2, setInput2] = useState([])
     const [result, setResult] = useState('')
     const [showInput, setShowInput] = useState([])
+    const [error, setError] = useState([])
     const [pressed, setPressed] = useState(false)
     console.log(result)
     
@@ -24,7 +25,7 @@ export default function UpdateItems(){
         
 
                 
-                setResult(UpdateObjectItems(jsonString1, jsonString2))
+                setShowInput(UpdateObjectItems(jsonString1, jsonString2))
 
                 if(result.length > 0){
                     setShowInput(input1 + ' + ' + input2 + ' =')
@@ -77,7 +78,7 @@ export default function UpdateItems(){
                 <button style={{margin: '15px'}}>Activate Function!</button>
             </form>
             <p>{pressed === true ? showInput : null}</p>
-            <section>{result.length > 0 ? <DisplayResult /> : null}</section>
+            <section>{result.length > 0  ? <DisplayResult /> : null}</section>
             
             
             
