@@ -42,7 +42,7 @@ export default function CheckIdentical (){
                 <input
                     style={{margin: '5px'}}
                     type="text area"
-                    placeholder="Eneter second object here!"
+                    placeholder="Enter second object here!"
                     value={input2}
                     onChange={(event) => {
                         setInput2(event.target.value)

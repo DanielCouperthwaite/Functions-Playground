@@ -36,7 +36,7 @@ export default function CountNestedItems (){
             <section style={{border: '10px solid', padding: '20px', margin: '20px', borderRadius: '25px'}}>
             <h2>Count Data Types</h2>
             <p>A function to to count the types of data within an object, however deeply nested!</p>
-            <p>Feel free to drop an object into the text box below, or give it a try with this example: {"{1: 1, 2: [3, 4, {5: true}],6: [{name: 'Michael'}, {likes: ['music', 'fish']}]}"}</p>
+            <p>Feel free to drop an object into the text box below, or give it a try with this example: </p>
             <p>{"{1: 1, 2: [3, 4, {5: true}],6: [{name: 'Michael'}, {likes: ['music', 'fish']}]}"}</p>
             <form style={{display: 'inline-flex', margin: 'auto'}} onSubmit={handleSubmit}>
                 <textarea

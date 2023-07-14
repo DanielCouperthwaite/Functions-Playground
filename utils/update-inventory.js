@@ -1,6 +1,6 @@
 
 
-function updateInventory(arr1, arr2) {
+export default function updateObjectItems(arr1, arr2) {
 
     const array1 = [...arr1]
     const array2 = [...arr2]
@@ -37,5 +37,3 @@ function updateInventory(arr1, arr2) {
 
     return array1
 }
-
-module.exports = updateInventory;
