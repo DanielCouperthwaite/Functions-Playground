@@ -12,7 +12,7 @@ export default function CheckIdentical (){
         setResult('')
         setShowInput('Please enter a valid object!')
         if(input1.length === 0 || input2.length === 0){
-            setShowInput('Please enter a valid object!')
+            setShowInput('Please enter two valid objects!')
         } else {
             const jsonString1 = eval('(' + input1 + ')')
             const jsonString2 = eval('(' + input2 + ')')
@@ -25,16 +25,15 @@ export default function CheckIdentical (){
     
     return (
         <>
-            <section style={{border: '10px solid'}}>
-            <h2>Count Data Types</h2>
-            <p>A function to to count the types of data within an object, however deeply nested!</p>
+            <section style={{border: '10px solid', padding: '20px', margin: '20px'}}>
+            <h2>Check if Objects are Identical</h2>
+            <p>A function to check whether the items in an object are identical, however deeply nested they might be!</p>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text area"
                     placeholder="Enter first object here!"
                     value={input1}
                     onChange={(event) => {
-                        setPressed(false)
                         setInput1(event.target.value)
                     }}
                 />
@@ -43,7 +42,6 @@ export default function CheckIdentical (){
                     placeholder="Eneter second object here!"
                     value={input2}
                     onChange={(event) => {
-                        setPressed(false)
                         setInput2(event.target.value)
                     }}
                 />
