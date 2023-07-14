@@ -6,21 +6,31 @@ export default function UpdateItems(){
     const [input2, setInput2] = useState([])
     const [result, setResult] = useState('')
     const [showInput, setShowInput] = useState([])
+    const [pressed, setPressed] = useState(false)
     console.log(result)
     
     function handleSubmit (event){
         event.preventDefault();
+        setPressed(true)
         setResult('')
+
         setShowInput('Please enter two valid 2D Arrays!')
-        if(input1.length === 0 || input2.length === 0 || input1[0] === 'undefined' || input2[0] === 'undefined'){
+
+        if(input1.length === 0 || input2.length === 0 || input1[0][0] === 'undefined' || input2[0][0] === 'undefined'){
             setShowInput('Please enter two valid 2D Arrays!')
         } else {
             const jsonString1 = eval('(' + input1 + ')')
             const jsonString2 = eval('(' + input2 + ')')
-            setShowInput(input1 + ' + ' + input2 + ' =')
+        
 
                 
                 setResult(UpdateObjectItems(jsonString1, jsonString2))
+
+                if(result.length > 0){
+                    setShowInput(input1 + ' + ' + input2 + ' =')
+                } else setShowInput('Please enter two valid 2D Arrays!')
+
+                
             
         }
     }
@@ -66,7 +76,7 @@ export default function UpdateItems(){
                 />
                 <button style={{margin: '15px'}}>Activate Function!</button>
             </form>
-            <p>{showInput}</p>
+            <p>{pressed === true ? showInput : null}</p>
             <section>{result.length > 0 ? <DisplayResult /> : null}</section>
             
             
