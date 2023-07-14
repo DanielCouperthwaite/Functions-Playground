@@ -6,22 +6,35 @@ export default function UpdateItems(){
     const [input2, setInput2] = useState([])
     const [result, setResult] = useState('')
     const [showInput, setShowInput] = useState([])
-
+    console.log(result)
+    
     function handleSubmit (event){
         event.preventDefault();
         setResult('')
         setShowInput('Please enter two valid 2D Arrays!')
-        if(input1.length === 0 || input2.length === 0){
+        if(input1.length === 0 || input2.length === 0 || input1[0] === 'undefined' || input2[0] === 'undefined'){
             setShowInput('Please enter two valid 2D Arrays!')
         } else {
             const jsonString1 = eval('(' + input1 + ')')
             const jsonString2 = eval('(' + input2 + ')')
-            setShowInput(input1 + ' = ' + input2 + ' =')
+            setShowInput(input1 + ' + ' + input2 + ' =')
 
-                console.log(result)
+                
                 setResult(UpdateObjectItems(jsonString1, jsonString2))
             
         }
+    }
+
+    function DisplayResult () {
+        return (
+            <>
+                <ul style={{listStyleType: 'none'}}>{result.map((item) => {
+                return (
+                <li>{`[ ${item[0]}, ${item[1]} ]`}</li>
+                )
+            })}</ul>
+            </>
+        )
     }
     
     return (
@@ -30,6 +43,7 @@ export default function UpdateItems(){
             <section style={{border: '10px solid', padding: '20px', margin: '20px', borderRadius: '25px'}}>
             <h2>Check if Objects are Identical</h2>
             <p>A function to check whether the items in an object are identical, however deeply nested they might be!</p>
+            <p>[[10, "apples"], [20, "bananas"], [15, "carrots"], [19, "dragonfruit"]]</p>
             <form onSubmit={handleSubmit}>
                 <input
                     style={{margin: '5px'}}
@@ -52,7 +66,10 @@ export default function UpdateItems(){
                 <button style={{margin: '15px'}}>Activate Function!</button>
             </form>
             <p>{showInput}</p>
-            <p>{result}</p>
+            <section>{result.length > 0 ? <DisplayResult /> : null}</section>
+            
+            
+            
             </section>
             </div>
         </>
