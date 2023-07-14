@@ -41,8 +41,9 @@ export default function UpdateItems(){
         <>
             <div style={{padding: '20px'}}>
             <section style={{border: '10px solid', padding: '20px', margin: '20px', borderRadius: '25px'}}>
-            <h2>Check if Objects are Identical</h2>
-            <p>A function to check whether the items in an object are identical, however deeply nested they might be!</p>
+            <h2>Update Array Items</h2>
+            <p>A function to update a 2D array with the items of another!</p>
+            <p>Give it a try with the example below, or any 2D arrays of your choice.</p>
             <p>[[10, "apples"], [20, "bananas"], [15, "carrots"], [19, "dragonfruit"]]</p>
             <form onSubmit={handleSubmit}>
                 <input
