@@ -56,7 +56,7 @@ export default function UpdateItems(){
                 <input
                     style={{margin: '5px'}}
                     type="text area"
-                    placeholder="Enter first object here!"
+                    placeholder="Enter first array here!"
                     value={input1}
                     onChange={(event) => {
                         setInput1(event.target.value)
@@ -65,7 +65,7 @@ export default function UpdateItems(){
                 <input
                     style={{margin: '5px'}}
                     type="text area"
-                    placeholder="Enter second object here!"
+                    placeholder="Enter second array here!"
                     value={input2}
                     onChange={(event) => {
                         setInput2(event.target.value)
