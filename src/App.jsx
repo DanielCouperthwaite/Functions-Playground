@@ -32,7 +32,7 @@ function App() {
         
       </div>
       <h1>Functions Playground</h1>
-      <p>Hi there!</p>
+      
       <p>Welcome to just a few different functions I have built while practising my coding skills!</p>
       <p>Be sure to check back for updates!</p>
       <p>Click the button below to start exploring...</p>
