@@ -21,7 +21,8 @@ export default function CheckIdentical (){
             <div style={{padding: '20px'}}>
             <section style={{border: '10px solid', padding: '20px', margin: '20px', borderRadius: '25px'}}>
             <h2>Top 3 Words</h2>
-            <p>A function to the 3 most common words in any string!</p>
+            <p>A function to find the 3 most common words in any string!</p>
+            <p>Enter any string you like and the function will return the 3 most common words in descending order.</p>
             <form onSubmit={handleSubmit}>
                 <input
                     style={{margin: '5px'}}
