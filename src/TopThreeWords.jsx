@@ -10,6 +10,7 @@ export default function CheckIdentical (){
         event.preventDefault();
         setResult('')
             if(topThreeWords(input1).length > 0){
+                console.log(topThreeWords(input1)[0])
                 setResult(topThreeWords(input1))
                 setShowInput('')
             } else setShowInput('Please enter a number!')

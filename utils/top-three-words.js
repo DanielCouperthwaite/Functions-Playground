@@ -38,11 +38,11 @@ export default function topThreeWords(text) {
     const sorted = totalsArr.sort((a, b) => b.value - a.value)
   
     if(sorted.length >= 3){
-      return [sorted[0]["letter"], sorted[1]["letter"], sorted[2]["letter"]]
+      return sorted[0]["letter"] + ', ' + sorted[1]["letter"] + ', ' +  sorted[2]["letter"]
     } else if(sorted.length === 2){
-      return [sorted[0]["letter"], sorted[1]["letter"]]
+      return sorted[0]["letter"] + ', ' +  sorted[1]["letter"]
     } else if(sorted.length === 1){
-      return [sorted[0]["letter"]]
+      return sorted[0]["letter"]
     } else if(sorted.length === 0){return []}
     
   }

@@ -20,7 +20,7 @@ function App() {
 
     <RomanNumerals />
     <SecondsToTime />
-    {/* <TopThreeWords /> */}
+    <TopThreeWords />
     <CheckIdentical />
     <CountNestedItems/>
     <UpdateItems />
