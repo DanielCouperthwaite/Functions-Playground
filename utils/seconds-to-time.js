@@ -1,4 +1,4 @@
-const secondsToTime = (seconds) => {
+export default function secondsToTime (seconds) {
 
     let secondsRemaining = seconds
   

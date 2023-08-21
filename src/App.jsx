@@ -5,6 +5,7 @@ import CountNestedItems from './CountNestedItems'
 import PreventMutation from './PreventMutation'
 import UpdateItems from './UpdateInventory'
 import RomanNumerals from './RomanNumerals'
+import SecondsToTime from './SecondsToTime'
 
 
 
@@ -14,12 +15,13 @@ function App() {
   function Functions() {
     return (
       <>
-      
-    
+
+
+    <RomanNumerals />
+    <SecondsToTime />
     <CheckIdentical />
     <CountNestedItems/>
     <UpdateItems />
-    <RomanNumerals />
 
 
       </>
