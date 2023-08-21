@@ -4,6 +4,7 @@ import CheckIdentical from './CheckIdentical.jsx'
 import CountNestedItems from './CountNestedItems'
 import PreventMutation from './PreventMutation'
 import UpdateItems from './UpdateInventory'
+import RomanNumerals from './RomanNumerals'
 
 
 
@@ -18,6 +19,7 @@ function App() {
     <CheckIdentical />
     <CountNestedItems/>
     <UpdateItems />
+    <RomanNumerals />
 
 
       </>
