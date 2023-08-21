@@ -13,7 +13,7 @@ export default function CheckIdentical (){
                 console.log(topThreeWords(input1)[0])
                 setResult(topThreeWords(input1))
                 setShowInput('')
-            } else setShowInput('Please enter a number!')
+            } else setShowInput('Please enter a string!')
     }
     
     return (
@@ -26,7 +26,7 @@ export default function CheckIdentical (){
                 <input
                     style={{margin: '5px'}}
                     type="text area"
-                    placeholder="Enter your number here!"
+                    placeholder="Enter your string here!"
                     value={input1}
                     onChange={(event) => {
                         setInput1(event.target.value)
