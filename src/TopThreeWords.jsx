@@ -10,7 +10,7 @@ export default function CheckIdentical (){
         event.preventDefault();
         setResult('')
             if(topThreeWords(input1).length > 0){
-                setResult(topthreeWords(input1))
+                setResult(topThreeWords(input1))
                 setShowInput('')
             } else setShowInput('Please enter a number!')
     }
@@ -19,8 +19,8 @@ export default function CheckIdentical (){
         <>
             <div style={{padding: '20px'}}>
             <section style={{border: '10px solid', padding: '20px', margin: '20px', borderRadius: '25px'}}>
-            <h2>Second Conversion</h2>
-            <p>A function to convert any number of seconds into divions of years, days hours and seconds</p>
+            <h2>Top 3 Words</h2>
+            <p>A function to the 3 most common words in any string!</p>
             <form onSubmit={handleSubmit}>
                 <input
                     style={{margin: '5px'}}
