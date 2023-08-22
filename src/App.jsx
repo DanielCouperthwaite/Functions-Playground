@@ -7,6 +7,7 @@ import UpdateItems from './UpdateInventory'
 import RomanNumerals from './RomanNumerals'
 import SecondsToTime from './SecondsToTime'
 import TopThreeWords from './TopThreeWords'
+import background from '../src/assets/backgroundd.png'
 
 
 
@@ -33,10 +34,12 @@ function App() {
 
   return (
     <>
+      <div 
+      // style={{backgroundImage: "url(" + background + ")"}}
+      >
+        
+        
       <div>
-        
-        
-      </div>
       <h1>Functions Playground</h1>
       <p>Hi there!</p>
       <p>Welcome to just a few different functions I have built while practising my coding skills!</p>
@@ -46,7 +49,8 @@ function App() {
         {show === true ? <button onClick={() => setShow(false)}>Hide Functions</button> : <button onClick={() => setShow(true)}>Click Here</button>}
       </div>
       <p>{show === true ? <Functions /> : null}</p>
-      
+      </div>
+      </div>
     </>
   )
 }
