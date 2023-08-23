@@ -2,12 +2,10 @@ import { useState } from 'react'
 import './App.css'
 import CheckIdentical from './CheckIdentical.jsx'
 import CountNestedItems from './CountNestedItems'
-import PreventMutation from './PreventMutation'
 import UpdateItems from './UpdateInventory'
 import RomanNumerals from './RomanNumerals'
 import SecondsToTime from './SecondsToTime'
 import TopThreeWords from './TopThreeWords'
-import background from '../src/assets/backgroundd.png'
 
 
 
