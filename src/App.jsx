@@ -34,9 +34,7 @@ function App() {
 
   return (
     <>
-      <div 
-      // style={{backgroundImage: "url(" + background + ")"}}
-      >
+      <div >
         
         
       <div>
