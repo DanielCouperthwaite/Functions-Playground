@@ -39,23 +39,17 @@ export default function CountNestedItems (){
             <p>Feel free to drop an object into the text box below, or give it a try with this example: </p>
             <p>{"{1: 1, 2: [3, 4, {5: true}],6: [{name: 'Michael'}, {likes: ['music', 'fish']}]}"}</p>
             <form style={{display: 'inline-flex', margin: 'auto'}} onSubmit={handleSubmit}>
-                <textarea
-                    placeholder="Enter object here!
-
-eg. {
-    1: 1, 
-    2: [3, 4, {5: true}],
-    6: [{name: 'Michael'}, {likes: ['music', 'fish']}]
-}"
-                    rows={7}
-                    cols={55}
+                <div>
+                    <textarea
+                    placeholder="Enter object here!"
                     value={input}
                     onChange={(event) => {
                         setPressed(false)
                         setInput(event.target.value)
                     }}
                 />
-                <button style={{margin: '20px'}}>Activate Function!</button>
+                    <button style={{margin: '20px'}}>Activate Function!</button>
+                </div>
             </form>
             <p>{showInput}</p>
             {/* <p>{Object.keys(result).length === 0 && pressed === true ? 'error4' : null}</p> */}
