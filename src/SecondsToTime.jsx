@@ -20,7 +20,7 @@ export default function CheckIdentical (){
             <div style={{padding: '20px'}}>
             <section style={{border: '10px solid', padding: '20px', margin: '20px', borderRadius: '25px'}}>
             <h2>Second Conversion</h2>
-            <p>A function to convert any number of seconds into divions of years, days hours and seconds</p>
+            <p>A function to convert any number of seconds into divisions of years, days hours and seconds</p>
             <form onSubmit={handleSubmit}>
                 <input
                     style={{margin: '5px'}}
